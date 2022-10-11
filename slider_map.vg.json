@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "url": "https://raw.githubusercontent.com/rken0007/fit3179/main/Volcano%20Erruptions%202010-2022.csv"
+    "url": "https://raw.githubusercontent.com/rken0007/fit3179/main/Volcano%20Erruptions%202010-2022%20Updated.csv"
   },
   "vconcat": [
     {
