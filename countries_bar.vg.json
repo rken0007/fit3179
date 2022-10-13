@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/rken0007/fit3179/main/Volcano%20Erruptions%202010-2022%20Updated.csv"
+  },
+  "width": 300,
+  "height": 200,
+  "background": "blanchedalmond",
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "aggregate": "count",
+      "field": "Country",
+      "type": "quantitative",
+      "axis": {"title": "Volcano Count"}
+    },
+    "y": {
+      "field": "Country",
+      "type": "nominal",
+      "axis": {"title": "Volcano Type"}
+    },
+    "color": {"value": "#fd8d3c"}
+  },
+  "config": {}
+}
