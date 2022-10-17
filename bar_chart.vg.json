@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/rken0007/fit3179/main/Volcano%20Erruptions%202010-2022%20Updated.csv"
+  },
+  "background": "whitesmoke",
+  "width": 400,
+  "height": 400,
+  "title": "Volcano Erruptions and Damage By Country",
+  "config": {"title": {"font": "Open Sans", "fontSize": 20}},
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "aggregate": "count",
+      "field": "Country",
+      "type": "quantitative",
+      "axis": {"title": "Volcano Count"}
+    },
+    "y": {
+      "field": "Country",
+      "type": "nominal",
+      "axis": {"title": "Countries"}
+    },
+    "color": {
+      "aggregate": "sum",
+      "field": "Damage ($Mil)",
+      "scale": {"scheme": "redgrey"},
+      "title": "Damage in ($Mil)"
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {
+        "field": "Damage ($Mil)",
+        "aggregate": "sum",
+        "type": "quantitative",
+        "title": "Damage in ($Mil)"
+      },
+      {
+      "aggregate": "count",
+      "field": "Country",
+      "type": "quantitative",
+      "title":"Eruptions"
+      }
+
+    ]
+  }
+}

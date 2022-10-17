@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="style_assignment.css" media="all">
+
+
+</head>
+
+<body style="background-color:whitesmoke">
+    
+    <div class="page">
+      <!-- Title start -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <h1> Volcanoes and Their Effects On The World </h1>
+            </div>
+        </div>
+    <!-- Title end -->
+
+    <!-- First Row-->
+    <div class="pure-g">
+      <div class="pure-u-1-2" >
+        <h2 class="center_a"> Deadliest Volcanoes</h2>
+        <p class="center_a"> Indonesia had the deadliest volcano disaster between 2010 and 2022 with 437 total deaths. The volcano caused a volcanic tsunami, as a result caused the famous 2018 Sunda Strait tsunami. Indonesia’s geography is dominated by volcanoes, meaning it is subjected to many eruptions with 80 volcanoes considered active still. 
+        </p>
+        <p class="center_a">
+          The second deadliest eruption also happened within Indonesia with an impact of 367 deaths because of the disaster. The significant eruption is known as part of the 2010 eruptions of Mount Merapi in Central Java, Indonesia. Hundreds of thousands of people were evacuated from the affected area
+          , however, many people continued to remain behind and stay at their homes, which led to the tragedy.
+        </p>
+      </div>
+      <div class="pure-u-1-2" id="slider_map" >
+        <script type="text/javascript">
+
+          var spec2 = "slider_map.vg.json";
+          vegaEmbed('#slider_map', spec2).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+          }).catch(console.error);
+        </script>
+      </div>
+
+    </div>
+    <!--Second Row-->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <h2 class="center_a" id="subtitle"> Volcano Types </h2>
+        <p class="center_a"> 
+          Stratovolcanoes have been the most common type of erupted volcanoes with 63 occurrences between 2010 and 2022. 
+          These volcanoes have steeper sides and are more cone shaped like volcanoes.
+           These volcanoes are more likely to produce explosive eruptions due gas building up in the viscous magma. The effect of these volcanoes is shown to be deadliest towards the economy with over 2 billion in damages over the 12-year period.          
+        </p>
+        <p class="center_a"> 
+          Shield volcanoes are the seco most common type of erupted volcanoes with 10 occurrences between 2010 and 2022. These volcanoes produce low viscosity, runny lava that spreads far from the source and forms a volcano with gentle slopes. These volcanoes are not as deadly as stratovolcanoes but are still subject to over 300 million in damages from the 12-year period.
+        </p>
+      </div>
+      <div class="pure-u-1-2" id="pie_chart">
+        <script type="text/javascript">
+         var spec2 = "pie_chart.vg.json";
+          vegaEmbed('#pie_chart', spec2).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+          }).catch(console.error);
+        </script>
+      </div>
+    </div>
+    <!--Third Row-->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <h2 class="center_a" id="subtitle"> Indonesia and Volcanoes</h2>
+        <p class="center_a"> 
+          Indonesia is highlighted as the country with the most volcano eruptions between the 2010 and 2022. This is unsurprising as it is known to have the most active volcanoes of all countries in the world. This is due to its geography that contains three tectonic plates that cause the volcanoes form.
+        </p>
+        <p class="center_a"> All 129 volcanoes within Indonesia are being observed careful as large numbers of them still show continuous activity. Moreover, it is estimated more than five million people are living (and/or working) within the "danger zone" of a volcano (who need to be evacuated immediately in case of significantly rising activity). There is also at least one significant volcano eruption in Indonesia every year, however it generally does not cause great damage to the environment or cause casualties as most of the active volcanoes are in isolated regions.
+           </p>
+      </div>
+      <div class="pure-u-1-2" id="bar_chart">
+        <script type="text/javascript">
+         var spec2 = "bar_chart.vg.json";
+          vegaEmbed('#bar_chart', spec2).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+          }).catch(console.error);
+        </script>
+      </div>
+    </div>
+
+    </div>
+
+</body>
