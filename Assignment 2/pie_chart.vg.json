@@ -1,0 +1,80 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 500,
+  "background": "whitesmoke",
+  "config": {"title": {"font": "Open Sans", "fontSize": 20}},
+  "data": {
+    "url": "https://raw.githubusercontent.com/rken0007/fit3179/main/Volcano%20Erruptions%202010-2022%20Updated.csv"
+  },
+  "title": "Types of Volcano Erruptions Between 2010-2022",
+  "params": [
+    {
+      "name": "year_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "labels": [
+          "All Years",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "name": "Year: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "year_selection == null || datum.Year == year_selection"}
+  ],
+  "mark": "arc",
+  "encoding": {
+    "theta": {"field": "Type", "aggregate": "count"},
+    "color": {
+      "field": "Type",
+      "scale": {"scheme": "redgrey"},
+      "title": "Volcano Type",
+      "sort": "descending"
+    },
+    "tooltip": [
+      {"field": "Type", "type": "nominal", "title": "Volcano Type"},
+      {
+        "field": "Type",
+        "aggregate": "count",
+        "type": "quantitative",
+        "title": "Eruptions"
+      },
+      {
+        "field": "Damage ($Mil)",
+        "aggregate": "sum",
+        "type": "quantitative",
+        "title": "Damage in ($Mil)"
+      }
+    ]
+  }
+}
